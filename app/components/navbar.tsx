@@ -6,7 +6,6 @@ export default function Navbar() {
   const [sellerToken, setSellerToken] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [storedCredit, setStoredCredit] = useState(0);
-  const [moneyBaht, setMoneyBaht] = useState(0);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -23,14 +22,11 @@ export default function Navbar() {
     }
 
     const credit = localStorage.getItem("storedCredit");
-    const money = localStorage.getItem("moneyBaht");
 
     if (credit) {
         setStoredCredit(parseFloat(credit));
     }
-    if (money) {
-        setMoneyBaht(parseFloat(money));
-    }
+
 }, []);
 
 useEffect(() => {

@@ -6,6 +6,7 @@ import Navbar from "../components/navbar";
 import Link from "next/link";
 import { EyeIcon, EyeOffIcon } from "lucide-react"; // Import icons from lucide-react
 
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -5,6 +5,8 @@ import Navbar from "@/app/components/navbar";
 import { useRouter } from 'next/navigation';
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 
+
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
