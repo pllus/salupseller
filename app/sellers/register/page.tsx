@@ -57,7 +57,7 @@ export default function Register() {
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-green-200">
         <div className="flex-grow flex items-center justify-center">
           <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-md">
-            <h2 className="text-2xl font-bold mb-4 text-black">Register</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Register(Seller)</h2>
 
             <div className="mb-4">
               <label className="block text-black" htmlFor="name">Name</label>

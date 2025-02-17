@@ -18,7 +18,8 @@ export default function CreateSalup() {
       useEffect(() => {
         const token = localStorage.getItem("sellerToken");
         if (!token) {
-          redirect('/sellers/login'); // Redirect if already logged in
+          alert("กรุณา Login ก่อนสร้างชีทใหม่");
+          redirect('/'); // Redirect if already logged in
         }
       }, []);
         

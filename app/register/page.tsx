@@ -2,6 +2,7 @@
 import Navbar from "@/app/components/navbar";
 import { useState } from "react";
 import { EyeIcon, EyeOffIcon } from "lucide-react"; 
+import Link from "next/link";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -51,7 +52,7 @@ export default function Register() {
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-green-200">
         <div className="flex-grow flex items-center justify-center">
           <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-md">
-            <h2 className="text-2xl text-black font-bold mb-4">Register</h2>
+            <h2 className="text-2xl text-black font-bold mb-4">Register(ลูกค้า)</h2>
             <div className="mb-4">
               <label className="block text-black" htmlFor="name">Name</label>
               <input
@@ -100,6 +101,9 @@ export default function Register() {
             <button type="submit" className="w-full bg-green-500 text-white p-2 rounded">
               Register
             </button>
+            <Link href="/sellers/register">
+            <p className="block text-gray-700 text-center underline" >register as seller</p>
+            </Link>
             {message && <p className="mt-4 text-center text-green-600">{message}</p>}
           </form>
         </div>

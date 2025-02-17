@@ -119,6 +119,9 @@ export default function Login() {
                 หรือคุณต้องการ Login ของ คนขายชีท
               </button>
             </Link>
+            <Link href="/register">
+            <p className="block text-gray-700 text-center underline" >register</p>
+            </Link>
             {message && <p className="mt-4 text-center text-green-600">{message}</p>}
           </form>
         </div>
