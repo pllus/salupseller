@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Math Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนคณิตศาสตร์พื้นฐาน",
+      "url": "https://mathsummaries.example.com/",
+      "tag": "official"
+    },
+    {
+      "name": "Physics Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนฟิสิกส์พื้นฐาน",
+      "url": "https://physicssummaries.example.com/",
+      "tag": "official"
+    },
+    {
+      "name": "Chemistry Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนเคมีพื้นฐาน",
+      "url": "https://chemistrysummaries.example.com/",
+      "tag": "community"
+    },
+    {
+      "name": "Biology Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนชีววิทยาพื้นฐาน",
+      "url": "https://biologysummaries.example.com/",
+      "tag": "community"
+    },
+    {
+      "name": "English Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนภาษาอังกฤษพื้นฐาน",
+      "url": "https://englishsummaries.example.com/",
+      "tag": "official"
+    },
+    {
+      "name": "History Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนประวัติศาสตร์พื้นฐาน",
+      "url": "https://historysummaries.example.com/",
+      "tag": "official"
+    },
+    {
+      "name": "Geography Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนภูมิศาสตร์พื้นฐาน",
+      "url": "https://geographysummaries.example.com/",
+      "tag": "official"
+    },
+    {
+      "name": "Computer Science Summary Sheets",
+      "description": "เเคสคูรัสสำหรับการเรียนวิทยาการคอมพิวเตอร์พื้นฐาน",
+      "url": "https://computersciencesummaries.example.com/",
+      "tag": "official"
+    }
+  ]
