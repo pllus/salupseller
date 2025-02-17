@@ -2,30 +2,48 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState<string | null>(null);
+  const [sellerToken, setSellerToken] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [storedCredit, setStoredCredit] = useState(0);
   const [moneyBaht, setMoneyBaht] = useState(0);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    const sellerToken = localStorage.getItem("sellerToken");
+
+    console.log("Token from localStorage:", token);
+    console.log("SellerToken from localStorage:", sellerToken);
+
     if (token) {
-      setToken(token);
+        setToken(token);
     }
+    if (sellerToken) {
+        setSellerToken(sellerToken);
+    }
+
     const credit = localStorage.getItem("storedCredit");
     const money = localStorage.getItem("moneyBaht");
+
     if (credit) {
-      setStoredCredit(parseFloat(credit));
+        setStoredCredit(parseFloat(credit));
     }
     if (money) {
-      setMoneyBaht(parseFloat(money));
+        setMoneyBaht(parseFloat(money));
     }
-  }, []);
+}, []);
 
-  const handleLogout = () => {
+useEffect(() => {
+    console.log("Updated sellerToken:", sellerToken);
+}, [sellerToken]);
+
+const handleLogout = () => {
     localStorage.removeItem("token");
-    setToken("");
-  };
+    localStorage.removeItem("sellerToken");
+    setToken(null);
+    setSellerToken(null);
+};
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -42,7 +60,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4 mr-7">
               <span className="text-gray-900 font-medium">Credit: {storedCredit}฿</span>
             </div>
-            {token ? (
+            {token || sellerToken ?  (
               <button onClick={handleLogout} type="button" className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
                 Logout
               </button>

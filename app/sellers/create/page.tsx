@@ -16,13 +16,12 @@ export default function CreateSalup() {
     // const router = useRouter();
 
       useEffect(() => {
-        const storedToken = localStorage.getItem('sellerToken');
-        if (!storedToken) {
-          alert("กรุณา Login ก่อนสร้างชีทใหม่");
-          redirect('/'); // Redirect if already logged in
+        const token = localStorage.getItem("sellerToken");
+        if (!token) {
+          redirect('/sellers/login'); // Redirect if already logged in
         }
       }, []);
-  
+        
     const validateForm = () => {
       if (!name || !description || price < 0) {
         setMessage("Please fill all required fields correctly");

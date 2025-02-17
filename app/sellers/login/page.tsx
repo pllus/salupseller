@@ -15,11 +15,9 @@ export default function Login() {
 
   // Check if user is already logged in
   useEffect(() => {
-    const storedToken = localStorage.getItem('sellerToken');
-    if (storedToken) {
-      setToken(storedToken);
-      alert("You are already logged in!");
-      router.push('/'); // Redirect if already logged in
+    const token = localStorage.getItem("sellerToken");
+    if (token) {
+      router.push("/"); // Redirect if token exists
     }
   }, []);
 
